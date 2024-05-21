@@ -17,7 +17,6 @@ export const projectList = {
         backgroundColour: 'purple',
         url: 'https://player.vimeo.com/video/695794451?h=59b2416ae0&autoplay=&color=ffffff&portrait=0'
     },
-
     3: {
         title: 'KELLOGG’S FROSTED FLAKES | TONY TIGER',
         videoType: 'iFrame',
@@ -57,13 +56,9 @@ export const projectList = {
     },
     9: {
         title: 'SHARPIE',
-        // videoType: 'video',
-        // backgroundColour: 'purple',
-        // url: '/videos/sharpie.mp4',
-        videoType: 'iFrame',
+        videoType: 'video',
         backgroundColour: 'purple',
-        url: 'https://player.vimeo.com/video/348407353?h=40f1d34e3a&autoplay=1&loop=1&color=ffffff&portrait=0'
-  
+        url: '/videos/sharpie.mp4',
     },
     10: {
         title: 'PEZ PLAY 4.0',
@@ -71,34 +66,24 @@ export const projectList = {
         backgroundColour: 'purple',
         url: 'https://www.youtube-nocookie.com/embed/DKEkPFheUUE?si=ZakBld15eNt2hVZI&amp;controls=0&autoplay=1'
     },
-
     11: {
         title: 'DARABASE | OCTOPUS ENERGY',
-        // videoType: 'video',
-        // backgroundColour: 'purple',
-        // url: '/videos/darabase.mp4',
-        videoType: 'iFrame',
+        videoType: 'video',
         backgroundColour: 'purple',
-        url: 'https://player.vimeo.com/video/348407353?h=40f1d34e3a&autoplay=1&loop=1&color=ffffff&portrait=0'
-  
+        url: '/videos/darabase.mp4',
     },
-
     12: {
         title: 'PAYLESS | \nHAPPY FEET: LEARN ABOUT YOUR FOOT SIZE',
-        // videoType: 'video',
-        // backgroundColour: 'purple',
-        // url: '/videos/payless.mp4'
-        videoType: 'iFrame',
+        videoType: 'video',
         backgroundColour: 'purple',
-        url: 'https://player.vimeo.com/video/348407353?h=40f1d34e3a&autoplay=1&loop=1&color=ffffff&portrait=0'
-  
+        url: '/videos/payless.mp4'
     },
     13: {
         title: '7-ELEVEN | STICKER SLAP',
         videoType: 'iFrame',
+        backgroundColour: 'green',
         url: 'https://player.vimeo.com/video/552432659?h=e39daeca54&autoplay=1&color=ffffff&portrait=0'
     },
-
     14: {
         title: 'NESTLE CPW | CRAYOLA |SHARE KINDNESS',
         videoType: 'iFrame',
@@ -112,7 +97,6 @@ export const projectList = {
         backgroundColour: 'purple',
         url: 'https://www.youtube.com/embed/XgR4SxRtGqE?si=8mAp-1I3FFVJ0kYJ&amp;controls=0&autoplay=1'
     },
-
     16: {
         title: 'BRITVIC | ROBINSONS BIG FRUIT HUNT',
         videoType: 'iFrame',
@@ -125,7 +109,6 @@ export const projectList = {
         backgroundColour: 'purple',
         url: 'https://player.vimeo.com/video/362593076?h=4c79c7061d&autoplay=1&color=ffffff&portrait=0'
     },
-
     18: {
         title: 'MICHELOB ULTRA | PLAY LIKE A PRO',
         videoType: 'iFrame',
@@ -140,23 +123,15 @@ export const projectList = {
     },
     20: {
         title: 'ESTEE LAUDER | ADVANCED NIGHT REPAIR',
-        // videoType: 'video',
-        // backgroundColour: 'purple',
-        // url: '/videos/estee.mp4',
-        videoType: 'iFrame',
+        videoType: 'video',
         backgroundColour: 'purple',
-        url: 'https://player.vimeo.com/video/348407353?h=40f1d34e3a&autoplay=1&loop=1&color=ffffff&portrait=0'
-  
-    },
+        url: '/videos/estee.mp4',
+    },        
     21: {
         title: 'PICK YOUR PARTY | WALMART | MONDELEZ | \nRITZ | CHIPS AHOY | OREO',
-        // videoType: 'video',
-        // backgroundColour: 'purple',
-        // url: '/videos/pickYourParty.mp4',
-        videoType: 'iFrame',
+        videoType: 'video',
         backgroundColour: 'purple',
-        url: 'https://player.vimeo.com/video/348407353?h=40f1d34e3a&autoplay=1&loop=1&color=ffffff&portrait=0'
-  
+        url: '/videos/pickYourParty.mp4',
     },
     22: {
         title: "ROVIO | ANGRY BIRDS EXPLORE |\nCADBURY'S CHRISTMAS",
@@ -166,23 +141,15 @@ export const projectList = {
     },
     23: {
         title: 'BUDWIEZER | PARTY TOWER | AB INBEV',
-        // videoType: 'video',
-        // backgroundColour: 'purple',
-        // url: '/videos/budwiezer.mp4',
-        videoType: 'iFrame',
+        videoType: 'video',
         backgroundColour: 'purple',
-        url: 'https://player.vimeo.com/video/348407353?h=40f1d34e3a&autoplay=1&loop=1&color=ffffff&portrait=0'
-  
+        url: '/videos/budwiezer.mp4',
     },
     24: {
         title: 'WD40 SPECIALIST PENETRANT',
-        // videoType: 'video',
-        // backgroundColour: 'purple',
-        // url: '/videos/WD40.mp4',
-        videoType: 'iFrame',
+        videoType: 'video',
         backgroundColour: 'purple',
-        url: 'https://player.vimeo.com/video/348407353?h=40f1d34e3a&autoplay=1&loop=1&color=ffffff&portrait=0'
-  
+        url: '/videos/WD40.mp4',
     },
     25: {
         title: '7-ELEVEN | DORITOS | DR PEPPER',
@@ -190,7 +157,6 @@ export const projectList = {
         backgroundColour: 'purple',
         url: 'https://www.youtube.com/embed/8Id0-jrNlEM?si=FBoCtBTNtWJH3CDZ&amp;controls=0&autoplay=1'
     },
-
     26: {
         title: 'ROVIO | ANGRY BIRDS EXPLORE |\nBURGER KING | EGG ATTACK',
         videoType: 'iFrame',
@@ -199,13 +165,9 @@ export const projectList = {
     },
     27: {
         title: 'H&M | DISNEY TREEHOUSE',
-        // videoType: 'video',
-        // backgroundColour: 'purple',
-        // url: '/videos/disneyTreehouse.mp4',
-        videoType: 'iFrame',
+        videoType: 'video',
         backgroundColour: 'purple',
-        url: 'https://player.vimeo.com/video/348407353?h=40f1d34e3a&autoplay=1&loop=1&color=ffffff&portrait=0'
-  
+        url: '/videos/disneyTreehouse.mp4',
     },
     28: {
         title: 'PARAMOUNT | LUNCHABLES | SPONGEBOB',
@@ -224,9 +186,7 @@ export const projectList = {
         videoType: 'iFrame',
         backgroundColour: 'purple',
         url: 'https://player.vimeo.com/video/400664576?h=016a1bb2fb&autoplay=1&color=ffffff&portrait=0'
-    },
-
-
+    }
 
     // 31: {
     //     title: '?RNIB',
