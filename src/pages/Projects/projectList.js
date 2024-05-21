@@ -7,15 +7,10 @@ export const projectList = {
     },
     1: {
         title: 'SESAME STREET | ELMO | JUST PLAY',
-        // videoType: 'video',
-        // backgroundColour: 'purple',
-        // url: '/videos/sesame.mp4'
-        videoType: 'iFrame',
+        videoType: 'video',
         backgroundColour: 'purple',
-        url: 'https://player.vimeo.com/video/348407353?h=40f1d34e3a&autoplay=1&loop=1&color=ffffff&portrait=0'
-  
+        url: '/videos/sesame.mp4'
     },      
-
     2: {
         title: 'LOKI | FUNKO POP | DISNEY',
         videoType: 'iFrame',
