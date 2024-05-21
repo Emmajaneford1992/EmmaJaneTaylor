@@ -3,7 +3,7 @@ import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { MarchingCubes, MarchingCube, MeshTransmissionMaterial, Environment, Bounds, Text, Float } from '@react-three/drei'
 import { Physics, RigidBody, BallCollider } from '@react-three/rapier'
-import { useControls } from 'leva'
+
 
 function MetaBall({ color, vec = new THREE.Vector3(), ...props }) {
 
