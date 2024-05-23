@@ -23,12 +23,13 @@ extend(geometry)
 
 import Video from "./Video";
 
+
 export default function Projects({...props}) {
 
   return (
     <>
       <PresentationControls snap global zoom={0.8} rotation={[0, 0, 0]} polar={[0, Math.PI / 4]} azimuth={[-Math.PI / 10, Math.PI / 10]}>
-        <group  position={[0,0,0]}>
+        <group  position={[0,0,-5]}>
           <Float floatIntensity={3} rotationIntensity={0.5}>
             <Video scale = {0.3} position={[0,1.8,0]} {...props}/>
             <Dots {...props}/>
@@ -143,6 +144,8 @@ function Card({...props }){
                   />
                 </meshBasicMaterial>          
               </mesh>
+
+     
 
               <mesh position={[0,0,-0.2]} url={url} >
                 <planeGeometry args={[ 1.5, 1.5]} />

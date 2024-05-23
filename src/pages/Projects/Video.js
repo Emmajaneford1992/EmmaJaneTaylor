@@ -5,19 +5,10 @@ import { useRef, useState } from 'react';
 import '../../styles.css';
 import { projectList } from './projectList';
 
-
-
-
-
-export default function Video({...props})
-{
-
+export default function Video({...props}){
     const [title, setTitle] = useState('')
     useFrame((state, delta) => {    
-        
-        setTitle(projectList[props.pageNum].title)
-        //console.log('vid', projectList[props.pageNum].title)
-
+        setTitle(projectList[props.pageNum].title);
     })
     const { gl } = useThree();
     return<>       

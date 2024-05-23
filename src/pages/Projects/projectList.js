@@ -24,7 +24,7 @@ export const projectList = {
         url: 'https://player.vimeo.com/video/384725954?h=59a31dfbdb&autoplay=1&color=ffffff&portrait=0'
     },
     4: {
-        title: 'CARS | DISNEY KITCHEN | THE WALT DISNEY COMPANY',
+        title: 'CARS | DISNEY KITCHEN |\nTHE WALT DISNEY COMPANY',
         videoType: 'iFrame',
         backgroundColour: 'purple',
         url: 'https://www.youtube-nocookie.com/embed/0i0OIxEZ_tw?si=mxXZFrWEc9nU412L&amp;controls=0&autoplay=1'
@@ -73,16 +73,16 @@ export const projectList = {
         url: '/videos/darabase.mp4',
     },
     12: {
-        title: 'PAYLESS | \nHAPPY FEET: LEARN ABOUT YOUR FOOT SIZE',
-        videoType: 'video',
-        backgroundColour: 'purple',
-        url: '/videos/payless.mp4'
-    },
-    13: {
         title: '7-ELEVEN | STICKER SLAP',
         videoType: 'iFrame',
         backgroundColour: 'green',
         url: 'https://player.vimeo.com/video/552432659?h=e39daeca54&autoplay=1&color=ffffff&portrait=0'
+    },
+    13: {
+        title: 'PAYLESS | \nHAPPY FEET: LEARN ABOUT YOUR FOOT SIZE',
+        videoType: 'video',
+        backgroundColour: 'purple',
+        url: '/videos/payless.mp4'
     },
     14: {
         title: 'NESTLE CPW | CRAYOLA |SHARE KINDNESS',
@@ -116,17 +116,17 @@ export const projectList = {
         url: 'https://player.vimeo.com/video/478944126?h=5658e92eeb&autoplay=1&color=ffffff&portrait=0'
     },
     19: {
-        title: 'ROVIO | ANGRY BIRDS EXPLORE |\nCHRISTMAS ADVENT CALENDAR | MODELEZ',
-        videoType: 'iFrame',
-        backgroundColour: 'purple',
-        url: 'https://player.vimeo.com/video/374874243?h=13d12165d8&autoplay=1&loop=1&color=ffffff&portrait=0'
-    },
-    20: {
         title: 'ESTEE LAUDER | ADVANCED NIGHT REPAIR',
         videoType: 'video',
         backgroundColour: 'purple',
         url: '/videos/estee.mp4',
-    },        
+    }, 
+    20: {
+        title: 'ROVIO | ANGRY BIRDS EXPLORE |\nCHRISTMAS ADVENT CALENDAR | MODELEZ',
+        videoType: 'iFrame',
+        backgroundColour: 'purple',
+        url: 'https://player.vimeo.com/video/374874243?h=13d12165d8&autoplay=1&loop=1&color=ffffff&portrait=0'
+    },   
     21: {
         title: 'PICK YOUR PARTY | WALMART | MONDELEZ | \nRITZ | CHIPS AHOY | OREO',
         videoType: 'video',
@@ -146,16 +146,16 @@ export const projectList = {
         url: '/videos/budwiezer.mp4',
     },
     24: {
-        title: 'WD40 SPECIALIST PENETRANT',
-        videoType: 'video',
-        backgroundColour: 'purple',
-        url: '/videos/WD40.mp4',
-    },
-    25: {
         title: '7-ELEVEN | DORITOS | DR PEPPER',
         videoType: 'iFrame',
         backgroundColour: 'purple',
         url: 'https://www.youtube.com/embed/8Id0-jrNlEM?si=FBoCtBTNtWJH3CDZ&amp;controls=0&autoplay=1'
+    },
+    25: {
+        title: 'WD40 SPECIALIST PENETRANT',
+        videoType: 'video',
+        backgroundColour: 'purple',
+        url: '/videos/WD40.mp4',
     },
     26: {
         title: 'ROVIO | ANGRY BIRDS EXPLORE |\nBURGER KING | EGG ATTACK',

@@ -16,6 +16,7 @@ import { useEffect } from 'react';
 import Projects from './pages/Projects/Projects';
 import projectList from './pages/Projects/projectList';
 import { useRef } from 'react';
+import Metaballs from './Metaballs';
 
 export default function PageContent() {
   const { currentPage } = usePage();
@@ -30,6 +31,7 @@ export default function PageContent() {
   }, [currentPage]);
 
   return <> 
+  
     { currentPage == 'projects' && 
     <ScrollControls  horizontal pages={ 30 } damping={0} >
           <Content />
@@ -40,14 +42,16 @@ export default function PageContent() {
           <Content />
     </ScrollControls>}
 
-
-
     {currentPage == 'home'  &&
-      <ScrollControls>
-        <Scroll html>
-             <Homepage/>
-        </Scroll> 
-      </ScrollControls>}
+      <>
+        <Metaballs/>
+        <ScrollControls>
+          <Scroll html>
+              <Homepage/>
+          </Scroll> 
+        </ScrollControls>
+      </>}
+        
     </>
 }
 
@@ -70,11 +74,8 @@ function Content() {
   })
   return <>
     <PresentationControls snap global zoom={1} rotation={[0, 0, 0]} polar={[0, 0]} azimuth={[0, 0]}>
-      
         { currentPage == 'projects' && <Projects scrollOffset={scroll.offset} pageNum={Math.round(pageNum)} pageNumFlt={pageNum} numOfPages={30}/> }
-
         { currentPage == 'skills'  &&  <Skills pageNum={Math.round(pageNum)} pageNumFlt={pageNum} numOfPages={18}/> } 
-
     </PresentationControls>
   
   </>

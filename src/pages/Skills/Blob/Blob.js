@@ -40,6 +40,20 @@ export const Blob = ({...props}) => {
   let pageNum = 0;
   let lastNum = 0;
 
+  useFrame((state) => {
+    const { clock } = state;
+    if (mesh.current) {
+      mesh.current.material.uniforms.u_time.value =
+        0.4 * clock.getElapsedTime();
+
+      mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
+        mesh.current.material.uniforms.u_intensity.value,
+       0.15,
+        0.02
+      );
+    }
+  });
+
   useFrame((state, delta) => {
     //console.log('Blog', props.pageNum)
     //lastNum = pageNum != lastNum ? pageNum : lastNum;
@@ -53,13 +67,22 @@ export const Blob = ({...props}) => {
     //mesh.current.material.uniforms.u_time.value = 0.4 * clock.getElapsedTime();
     
 
+    const { clock } = state;
+    if (mesh.current) {
+      mesh.current.material.uniforms.u_time.value =0.6 * clock.getElapsedTime();
 
+      mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
+        mesh.current.material.uniforms.u_intensity.value,
+       0.2,
+        0.2
+      );
+    }
 
-    mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
-      mesh.current.material.uniforms.u_intensity.value,
-      hover.current ? 0.85 : 0.15,
-      0.02
-    );
+    // mesh.current.material.uniforms.u_intensity.value = MathUtils.lerp(
+    //   mesh.current.material.uniforms.u_intensity.value,
+    //   hover.current ? 0.85 : 0.15,
+    //   0.02
+    // );
 
 
     mesh.current.material.uniforms.u_time.value = scroll.offset ; 

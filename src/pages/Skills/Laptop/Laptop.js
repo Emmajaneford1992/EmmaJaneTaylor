@@ -34,7 +34,7 @@ export function Laptop({ ...props }) {
       <directionalLight ref={keyLight} castShadow intensity={6}>
         <orthographicCamera attachObject={['shadow', 'camera']} args={[-10, 10, 10, -10, 0.5, 30]} />
       </directionalLight>
-      <group ref={group} position={[5, -height / 1.5, -3]} scale={0.3} {...props}>
+      <group ref={group} position={[8, -height / 1.5, -5]} scale={0.3} {...props}>
         <spotLight ref={stripLight} position={[width * 2.5, 0, width]} angle={0.19} penumbra={1} intensity={0.25} />
         <spotLight ref={fillLight} position={[0, -width / 2.4, -width * 2.2]} angle={0.2} penumbra={1} intensity={2} distance={width * 3} />
 

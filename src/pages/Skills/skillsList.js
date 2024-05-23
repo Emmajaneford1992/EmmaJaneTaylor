@@ -7,7 +7,8 @@ export const skillsList = [
         backgroundColour: 'orange',
         url: '/logos/html.png',
         websiteUrl : 'https://en.wikipedia.org/wiki/HTML',
-        rgb: [0.94510, 0.39608, 0.16078]
+        rgb: [0.94510, 0.39608, 0.16078],
+        hex: '#f16529'
     },
     {
         id: 1,
@@ -17,7 +18,8 @@ export const skillsList = [
         backgroundColour: 'orange',
         url: '/logos/html.png',
         websiteUrl : 'https://en.wikipedia.org/wiki/HTML',
-        rgb: [0.94510, 0.39608, 0.16078]
+        rgb: [0.94510, 0.39608, 0.16078],
+        hex: '#f16529'
     },
     {
         id: 2,
@@ -27,7 +29,8 @@ export const skillsList = [
         backgroundColour: 'blue',
         url: '/logos/css.png',
         websiteUrl : 'https://en.wikipedia.org/wiki/css',
-        rgb: [0.20392, 0.60784, 0.83529]
+        rgb: [0.20392, 0.60784, 0.83529],
+        hex: '#349bd5'
     },      
     {
         id: 3,
@@ -37,7 +40,8 @@ export const skillsList = [
         backgroundColour: 'YELLOW',
         url: '/logos/javascript.png',
         websiteUrl: 'https://en.wikipedia.org/wiki/JavaScript',
-        rgb: [0.93725, 0.85882, 0.31373]
+        rgb: [0.93725, 0.85882, 0.31373],
+        hex: '#efdb50'
     },
     {
         id: 4,
@@ -47,7 +51,8 @@ export const skillsList = [
         backgroundColour: 'Blue',
         url: '/logos/typescript.png',
         websiteUrl: 'https://www.typescriptlang.org/',
-        rgb: [0.18824, 0.47059, 0.77647]
+        rgb: [0.18824, 0.47059, 0.77647],
+        hex: '#3078c6'
     },
     {
         id: 5,
@@ -57,7 +62,8 @@ export const skillsList = [
         backgroundColour: 'orange',
         url: '/logos/threejs.png',
         websiteUrl: 'https://threejs.org/',
-        rgb: [1.0, 0.5, 0.0]
+        rgb: [1.0, 0.5, 0.0],
+        hex: '#ff8000'
     },
     {
         id: 6,
@@ -67,7 +73,8 @@ export const skillsList = [
         backgroundColour: 'skyblue',
         url: '/logos/react.png',
         websiteUrl: 'https://react.dev/',     
-        rgb: [0.38824, 0.85882, 0.98824]
+        rgb: [0.38824, 0.85882, 0.98824],
+        hex: '#63dbfc'
     },
     {
         id: 7,
@@ -77,7 +84,8 @@ export const skillsList = [
         backgroundColour: 'skyblue',
         url: '/logos/reactthree.png',
         websiteUrl: 'https://docs.pmnd.rs/react-three-fiber',
-        rgb: [0.38824, 0.85882, 0.98824],     
+        rgb: [0.38824, 0.85882, 0.98824],
+        hex: '#63dbfc' 
     },
     {
         id: 8,
@@ -87,7 +95,8 @@ export const skillsList = [
         backgroundColour: 'orange',
         url: '/logos/git.png',
         websiteUrl: "https://en.wikipedia.org/wiki/Git",
-        rgb: [0.94118, 0.32157, 0.20000]
+        rgb: [0.94118, 0.32157, 0.20000],
+        hex: '#f05233'
     },
     {
         id: 9,
@@ -97,7 +106,8 @@ export const skillsList = [
         backgroundColour: 'skyblue',
         url: '/logos/webpack.png',
         websiteUrl: 'https://webpack.js.org/',
-        rgb: [0.19216, 0.65882, 1.00000]
+        rgb: [0.19216, 0.65882, 1.00000],
+        hex: '#31a8ff'
     },
     {
         id: 10,
@@ -107,7 +117,8 @@ export const skillsList = [
         backgroundColour: 'skyblue',
         url: '/logos/vite.png',
         websiteUrl: 'https://vitejs.dev/',
-        rgb: [0.56471, 0.43137, 0.99216]
+        rgb: [0.56471, 0.43137, 0.99216],
+        hex: '#906efd'
     },
     {
         id: 11,
@@ -117,7 +128,8 @@ export const skillsList = [
         backgroundColour: 'purple',
         url: '/logos/parcel.png',
         websiteUrl: 'https://parceljs.org/',
-        rgb: [0.19216, 0.65882, 1.00000]   
+        rgb: [0.19216, 0.65882, 1.00000],
+        hex: '#31a8ff' 
     },
     {
         id: 12,
@@ -127,7 +139,8 @@ export const skillsList = [
         backgroundColour: 'skyblue',
         url: '/logos/zappar.png',
         websiteUrl: 'https://www.youtube.com/embed/EiaoA_SWxY8?si=XTDtrPBmso3e4xkS',
-        rgb: [0.80392, 0.22353, 0.15294]
+        rgb: [0.80392, 0.22353, 0.15294],
+        hex: '#cd3927'
     },
     {
         id: 13,
@@ -137,7 +150,8 @@ export const skillsList = [
         backgroundColour: 'grey',
         url: '/logos/unity.png',
         websiteUrl: 'https://unity.com/games',
-        rgb: [0.50196, 0.50196, 0.50196]
+        rgb: [0.50196, 0.50196, 0.50196],
+        hex: '#808080'
     },
     {
         id: 14,
@@ -147,7 +161,8 @@ export const skillsList = [
         backgroundColour: 'skyBlue',
         url: '/logos/maya.png',
         websiteUrl: 'https://www.youtube.com/embed/TCkOS4F51MI?si=EVLa4kFjsk-37cRr',  
-        rgb: [0.21961, 0.64706, 0.80000]
+        rgb: [0.21961, 0.64706, 0.80000],
+        hex: '#38a5cc'
     },
     {
         id: 15,
@@ -157,7 +172,8 @@ export const skillsList = [
         backgroundColour: 'orange',
         url: '/logos/blender.png',
         websiteUrl: 'https://www.youtube.com/embed/34FBeC9mktE?si=GjpwIm5GbIYR7ZVf', 
-        rgb: [0.91765, 0.46275, 0.00392]
+        rgb: [0.91765, 0.46275, 0.00392],
+        hex: '#ea7601'
     },
     {
         id: 16,
@@ -167,7 +183,8 @@ export const skillsList = [
         backgroundColour: 'blue',
         url: '/logos/photoshop.png',
         websiteUrl: 'https://en.wikipedia.org/wiki/Adobe_Photoshop',
-        rgb: [0.19216, 0.65490, 1.00000]
+        rgb: [0.19216, 0.65490, 1.00000],
+        hex: '#31a7ff'
     },
     {
         id: 17,
@@ -177,7 +194,8 @@ export const skillsList = [
         backgroundColour: 'orange',
         url: '/logos/illustrator.png',
         websiteUrl: 'https://en.wikipedia.org/wiki/Adobe_Illustrator',
-        rgb: [1.00000, 0.60392, 0.00392]
+        rgb: [1.00000, 0.60392, 0.00392],
+        hex: '#ff9a01'
     },
     {
         id: 18,
@@ -187,7 +205,8 @@ export const skillsList = [
         backgroundColour: 'blue',
         url: '/logos/visualStudio.png',
         websiteUrl: 'https://en.wikipedia.org/wiki/Visual_Studio_Code',
-        rgb: [0.19216, 0.65490, 1.00000]
+        rgb: [0.19216, 0.65490, 1.00000],
+        hex: '#31a7ff'
     },
     {
         id: 19,
@@ -197,6 +216,7 @@ export const skillsList = [
         backgroundColour: 'orange',
         url: '/logos/html.png',
         websiteUrl : 'https://en.wikipedia.org/wiki/HTML',
-        rgb: [0.94510, 0.39608, 0.16078]
+        rgb: [0.94510, 0.39608, 0.16078],
+        hex: '#f16529'
     }
 ]

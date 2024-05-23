@@ -4,12 +4,13 @@ import { geometry } from 'maath';
 import { useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { skillsList } from './skillsList';
-
+import { useSpring } from '@react-spring/core'
 import { suspend } from 'suspend-react';
 import '../../util';
 
-import {Blob} from './Blob/Blob' 
+
 import {Laptop} from './Laptop/Laptop'
+import WobblyBlob from './WobblyBlob';
 
 const bold = import('@pmndrs/assets/fonts/inter_bold.woff')
 const medium = import('@pmndrs/assets/fonts/inter_medium.woff')
@@ -17,21 +18,23 @@ const medium = import('@pmndrs/assets/fonts/inter_medium.woff')
 extend(geometry)
 
 export default function Skills({...props}) {
+  const [{ background, fill }, set] = useSpring({ background: '#f0f0f0', fill: '#202020' }, [])
+
   return (
     <>
-      <PresentationControls snap global zoom={0.8} rotation={[0, 0, 0]} polar={[0, Math.PI / 4]} azimuth={[-Math.PI / 10, Math.PI / 10]}>
-        <group position={[-2,2,0]}>
+      {/* <PresentationControls snap global zoom={0.8} rotation={[0, 0, 0]} polar={[0, Math.PI / 4]} azimuth={[-Math.PI / 10, Math.PI / 10]}> */}
+        <group position={[-2,2,-5]}>
           <Float floatIntensity={3} rotationIntensity={0.5}>
             <Laptop  {...props}/>
             <Dots {...props}/>
             <Title {...props}/>
           </Float>
           <Rig rotation={[0, 0, 0]} scale = {0.32} position={[0,0,0]} {...props}>
-              <Blob {...props}/>
+              <WobblyBlob {...props}/>
               <Carousel {...props} />
           </Rig>
         </group>
-      </PresentationControls>
+      {/* </PresentationControls> */}
 
     </>
   )
@@ -127,8 +130,8 @@ function Title({...props}) {
       <Html transform portal={{ current: gl.domElement.parentNode }}>
         <div className='titleScroll'>
           <div className='titleScrollSlider' style={styles}>
-            {skillsList.map(skill => (
-              <h1 key={skill.id}>{skillsList[props.pageNum+1].title}</h1>
+            {skillsList.map((skill, i) => (
+              <h1 key={skill.id}>{skillsList[i].title}</h1>
             ))}
           </div>
         </div>

@@ -8,9 +8,6 @@ import Homepage from './pages/Homepage'
 import PageProvider from './context/pageProvider'
 
 
-
-
-
 createRoot(document.getElementById("root")).render(
     <>
         <PageProvider>

@@ -1,7 +1,7 @@
 import React, { createContext } from 'react';
 
 const defaultPageContext = {
-    currentPage: 'home',
+    currentPage: 'skills',
     setCurrentPage: () => {
         console.warn("setCurrentPage is not provided");
     }

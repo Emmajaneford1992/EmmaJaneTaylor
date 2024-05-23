@@ -303,26 +303,26 @@ body {
   transform-origin: top left;
 }
 
-
 .titleScroll {
     font-size: 5px;   
     width: 100px;
     height: 5vw;
     /* background-color: red; */
     overflow: hidden;
-    width: 100px;
+ 
     
 }
 
 .titleScrollSlider { 
+    width: 2000px;
     display: flex;
     flex-direction: row;
     padding-left: 1vw;
-    width: 3000px;
-
-
 }
 
 .titleScrollSlider h1 {
+    display: flex;
     width: 100px;
+    height: 7dvb;
+    align-items: center;
 }
