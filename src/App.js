@@ -13,10 +13,8 @@ export default function App()
 {
     return<>
         <Canvas>
-
-            <PageContent/>
+            <PageContent/> 
             <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/industrial_workshop_foundry_1k.hdr" />
-
         </Canvas>
 
     </>

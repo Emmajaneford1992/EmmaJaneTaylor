@@ -18,7 +18,6 @@ export default function WobblyBlob({ ...props }) {
   const [down, setDown] = useState(false)
   const [hovered, setHovered] = useState(false)
 
-
   // Change cursor on hovered state
   useEffect(() => {
     document.body.style.cursor = hovered
@@ -58,8 +57,6 @@ export default function WobblyBlob({ ...props }) {
       config: (n) => n === 'wobble' && hovered && { mass: 2, tension: 1000, friction: 10 }
     },
     [mode, hovered, down, props.pageNum]
-
-
   )
 
   return (
@@ -68,14 +65,14 @@ export default function WobblyBlob({ ...props }) {
       <a.ambientLight intensity={ambient} />
       <a.pointLight ref={light} position-z={-15} intensity={env} color="#F8C069" />
 
-      <Suspense fallback={null}>
+      <Suspense >
         <a.mesh
           ref={sphere}
           scale={wobble}
           onPointerOver={() => setHovered(true)}
           onPointerOut={() => setHovered(false)}>
           <sphereGeometry args={[1, 64, 64]} />
-          <AnimatedMaterial color={color} envMapIntensity={env} clearcoat={coat} clearcoatRoughness={0.2} metalness={0.1} />
+          <AnimatedMaterial color={color} envMapIntensity={env} clearcoat={coat} clearcoatRoughness={0.1} metalness={0.1} opacity={0.5} />
         </a.mesh>
       <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/industrial_workshop_foundry_1k.hdr" />
         <ContactShadows

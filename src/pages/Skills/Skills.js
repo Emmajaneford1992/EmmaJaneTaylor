@@ -22,7 +22,7 @@ export default function Skills({...props}) {
 
   return (
     <>
-      {/* <PresentationControls snap global zoom={0.8} rotation={[0, 0, 0]} polar={[0, Math.PI / 4]} azimuth={[-Math.PI / 10, Math.PI / 10]}> */}
+      <PresentationControls snap global zoom={0.8} rotation={[0, 0, 0]} polar={[0, Math.PI / 4]} azimuth={[-Math.PI / 10, Math.PI / 10]}>
         <group position={[-2,2,-5]}>
           <Float floatIntensity={3} rotationIntensity={0.5}>
             <Laptop  {...props}/>
@@ -34,7 +34,7 @@ export default function Skills({...props}) {
               <Carousel {...props} />
           </Rig>
         </group>
-      {/* </PresentationControls> */}
+      </PresentationControls>
 
     </>
   )

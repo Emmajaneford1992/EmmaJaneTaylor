@@ -1,8 +1,9 @@
 
-import '../styles.css'
+import '../../styles.css'
 // import {useFrame} from '@react-three/fiber';
 import {useState} from 'react';
-import modalImage from '../assets/images/profileImage.png'
+import modalImage from '../../assets/images/profileImage.png'
+import Header from '../../Header';
 
 export default function Homepage()
 {
@@ -15,6 +16,7 @@ export default function Homepage()
 
   
     return <>
+         
         <div className='modal'> 
             <div className='homepage' >
                 <div className='homepage-text'>
