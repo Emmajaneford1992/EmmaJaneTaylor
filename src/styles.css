@@ -51,7 +51,7 @@ body,
     font-family: RobotoRegularFont;
     letter-spacing: 0.25vw;
     font-size: 0.7rem;
-    font-weight: 900;
+    /* font-weight: 900; */
     border: none;
     background-color: none;
     background-color: #ffffff;
@@ -138,11 +138,11 @@ body,
     display: flex;
     color: black;
     font-size: 1.1rem;
-    font-weight: 100;
+    /* font-weight: 100; */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    font-weight: bold;
+    /* font-weight: bold; */
     width: 14rem;
 
  
@@ -167,7 +167,7 @@ body,
     display: flex;
     flex-direction: column;
     font-size: 0.7rem;
-    font-weight: 100;
+    /* font-weight: 100; */
     text-align: center;
 
 }
