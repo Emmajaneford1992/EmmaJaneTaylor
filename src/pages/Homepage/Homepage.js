@@ -20,7 +20,7 @@ export default function Homepage()
         <div className='modal'> 
             <div className='homepage' >
                 <div className='homepage-text'>
-                    <div className='name'>Emma Ford</div>
+                    <div className='name'>Emma Taylor</div>
                     <div className='job'>AR Web Developer</div>
                     <div className='description'>Creative Front-end Web Developer with experience making Augmented Reality experiences, & 8 Years+ coding experience</div>
                 </div>

@@ -3,7 +3,7 @@ export const projectList = {
         title: 'TROLLS',
         description1: "While at Zappar, I was thrilled to work with Universal to bring Trolls World Tour to life before the new film release. The experience was designed to be accessed across social media platforms and is launched via WebAR using Zappar’s Instant World Tracking technology. This allows users to place an interactive map of the Troll's kingdom on the floor and explore a range of face filters with fun and scary hairstyles to try.",
         videoType: 'iFrame',
-        backgroundColour: '#4433a5',
+        backgroundColour: '#f680a7',
         backgroundColour2: 'pink',
         url: 'https://player.vimeo.com/video/400664576?h=016a1bb2fb&autoplay=1&color=ffffff&portrait=0'
     },
@@ -12,7 +12,7 @@ export const projectList = {
         description1: "While at Zappar, I worked with Just Play, to develop an engaging WebAR experience designed to enhance online customer interactions, replicating the in-store 'try me' feature. Users are placed centre stage through a face filter featuring Elmo and children are then encouraged to engage by opening their mouths to make a 'ROAR' sound and shake the scene.",
         description2: "I developed the Face Tracked AR web experience using Zappar’s Universal AR SDK & other front-end web languages such as HTML, CSS & Typescript.",
         videoType: 'video',
-        backgroundColour: 'lightyellow',
+        backgroundColour: '#11b495',
         backgroundColour2: 'skyBlue',
         url: '/videos/sesame.mp4'
     },      
@@ -22,7 +22,7 @@ export const projectList = {
         description2: "Filled with Loki and TVA references (including the iconic Miss Minutes) players are given a series of multiple-choice questions where they need to select the correct Pop! Figure to answer. There are 10 Funko Pop! figures to choose from and over 50 randomised questions within the game to encourage replayability.",
         description3: "I was the main developer on this project but I worked alongside another developer who created the portal gates the Funko-pop characters appeared through.",
         videoType: 'iFrame',
-        backgroundColour: '#ff6400',
+        backgroundColour: '#d96c15',
         backgroundColour2: 'yellow',
         url: 'https://player.vimeo.com/video/695794451?h=59b2416ae0&autoplay=&color=ffffff&portrait=0'
     },
@@ -31,18 +31,18 @@ export const projectList = {
         description1: "As part of their ‘Mission Tiger’ campaign, Kellogg’s Frosted Flakes launched this WebAR campaign to educate consumers about their work to support sports in schools. The experience was designed to inspire children to participate in the brand’s mission, through mini-games and fun face filters for social sharing. Kellogg's utilised a custom branded splash screen to immerse players in the experiences from the start, with links to the games and further information on Kellogg’s initiatives.",
         description2: "I worked alongside the 3D & design team to create this experience. The project was created using Zappar creative studio tools, I especially enjoyed working on the sports mini-games for this experience. ",
         videoType: 'iFrame',
-        backgroundColour: '#006fb4',
+        backgroundColour: '##abe9ff',
         backgroundColour2: 'skyBlue',
         url: 'https://player.vimeo.com/video/384725954?h=59a31dfbdb&autoplay=1&color=ffffff&portrait=0'
     },
     4: {
-        title: ' DISNEY KITCHEN |\nTHE WALT DISNEY COMPANY | COLOURING WITH CARS | STAR TO STAR | MARVEL',
+        title: 'DISNEY KITCHEN |\nTHE WALT DISNEY COMPANY | COLOURING WITH CARS | STAR TO STAR | MARVEL',
         description1: "Zappar Creative Studio worked with The Walt Disney Company to create an AR experience that prompts learning and a healthy lifestyle through spatial storytelling, using this to create true digital discovery for the Disney Kitchen suite of AR experiences. It was designed to complement a range of products featuring classic and much-loved Disney properties. I developed three mini-games within the Disney Kitchen experience ",
         description2: "First, the Disney Star-to-Star game, which is a twist on the traditional ‘dot-to-dot’ game. The user's device gyroscope is used to keep the space scene in place, the players can then move their phone around the the 360 environment as well as drag the wand around the screen to join the stars together, once they have joined all of the stars together, a Disney Princess is revealed.  Elements are also layered in the 360 space scene to give a parallax effect.",
         description3: "The Marvel ‘Point-to-Point' game was very similar to the Disney Princess ’Star to Star’. The game mechanics were copied, but the background was swapped out and each new Marvel character was traced to make sure the dots & lines were in the correct place to form each unique character.",
         description4: "I also developed the ‘Colouring with Cars’ mini-game. This is an AR colouring activity using world tracking to place the scene from cars in the user's real-world space. After the player has placed the scene they can pick from dozens of Cars characters to colour in, they simply choose a colour from the bottom menu and tap on a section of the image to colour. Once they are happy with their creation they can save the image to their device. To create the colouring functionality I used typescript & Three.js. Once I had determined which section of the SVG the user had clicked on I changed the colour. I also added an undo button so that the players could revert back to the previous state if they weren’t happy with their most recent change.",
         videoType: 'iFrame',
-        backgroundColour: '#9cd5ec',
+        backgroundColour: '#baedff',
         backgroundColour2: 'yellowGreen',
         url: 'https://www.youtube-nocookie.com/embed/0i0OIxEZ_tw?si=mxXZFrWEc9nU412L&amp;controls=0&autoplay=1'
     },
@@ -118,7 +118,7 @@ export const projectList = {
         description1: "Payless wanted to provide their customers with an augmented reality experience that makes it fun for kids to have their feet measured at home and in-store. Kids (with the help of a parent!) can measure their feet using the shoe-sizer tool, and take the AR quiz to find out which animal shares the same foot size. They can take a selfie with their animal pal, and see shoes that fit on the Payless website.",
         description2: "I was the main developer on the Payless, foot measuring experience. This was one of my first projects as a front-end developer, utilising Zappar’s Image Tracking from their Universal AR SDK library to track the content to the foot-measuring tool, as well as other web languages such as Three.js, typescript, HTML & CSS.",
         videoType: 'video',
-        backgroundColour: '#ff7d17',
+        backgroundColour: '#fe6600',
         backgroundColour2: 'skyBlue',
         url: '/videos/payless.mp4'
     },
@@ -139,7 +139,7 @@ export const projectList = {
         description4: "This game is a time-based strategy game after the player has watered the plant the timer is revealed at the top of the screen. The user must come back after the time is complete to see the evolution of their plant growing and to continue caring for it. Because it was unlikely that the user would keep their app open during the timer’s countdown I used the player's device storage to store the time they had last watered their plant. So if the player did exit and re-enter the app I could work out whether the timer had already been completed or if I needed to update the timer with the new countdown.",
         description5: "For this project, I worked alongside the 3D team who created a different plant for each different stage of the plant's evolution. As well as animating the plant they also used blend-shapes to open and close the plant. This was a nice feature added so the player could interact with the plant, when they clicked on the plant it would open/close and when they swiped the screen the plant would respond by animating side to side. I utilised Three.js to import the GLTF, animate from frame to frame, as well as morph between the blend shapes. Using Three.js I could add lighting and a shadow plane so the plant pot could cast and retrieve shadows. To make it look more photorealistic.",
         videoType: 'iFrame',
-        backgroundColour: '#0e6fac',
+        backgroundColour: '#28a591',
         backgroundColour2: 'skyBlue',
         url: 'https://www.youtube.com/embed/XgR4SxRtGqE?si=8mAp-1I3FFVJ0kYJ&amp;controls=0&autoplay=1'
     },
@@ -150,7 +150,7 @@ export const projectList = {
         description3: "I created the Apple face filter,  using a shader material to blend the apple GLTF model with the camera texture so the user can see their face. This was my first experience using Vertex & Fragment materials.",
         description4: "For the interactive blackberry photo feature, the blackberry reacts to the user opening and closing their mouth. Using the face-tracking library I could attach face landmarks on the top and bottom of the user's lips, I could then work out if the landmarks were touching or not and would know if the user's mouth was open or closed. I also used masking to make it appear like the blackberry is disappearing into the mouth.",
         videoType: 'iFrame',
-        backgroundColour: '#93e3fe',
+        backgroundColour: '#3b9cd8',
         backgroundColour2: 'skyBlue',
         url: 'https://www.youtube.com/embed/fS0kZUy0QP4?si=fTFIQGkx7bfnFiMH&amp;controls=0&autoplay=1'
     },
@@ -168,7 +168,7 @@ export const projectList = {
         title: 'MICHELOB ULTRA | PLAY LIKE A PRO',
         description1: "Zappar worked with Michelob to profile their light beer, Michelob ULTRA, with an engaging and fun brand experience that people can try out in retail stores. The mini-games ranged from knocking Michelob ULTRA bottles with Peyton Manning to playing golf in your own back garden. Players could win prizes by collecting and spending in-game points that can be spent on MyCooler.com.",
         videoType: 'iFrame',
-        backgroundColour: 'red',
+        backgroundColour: '#d11336',
         backgroundColour2: 'skyBlue',
         url: 'https://player.vimeo.com/video/478944126?h=5658e92eeb&autoplay=1&color=ffffff&portrait=0'
     },
@@ -185,7 +185,7 @@ export const projectList = {
         title: 'ROVIO | ANGRY BIRDS EXPLORE | CHRISTMAS ADVENT CALENDAR | MODELEZ',
         description1: "In collaboration with Mondelez and Rovio, while promoting the new ‘Angry Birds 2’ cinema release, Zappar reinvented the traditional advent calendar with the use of augmented reality. Built off the ritual of opening a door to reveal a tasty chocolate treat, we built an experience where the player would have to return each day before Christmas to open a door to reveal and enjoy a new exciting interactive AR activity. The different activities ranged from photo features, puzzle games & placing world-tracked animations. Many members of the Zappar Creative Studio worked in collaboration to create content for each day, my part was developing the puzzle games. I developed Rovio Christmas-themed slide puzzles and dot-to-dot gyroscope mini-games that were hidden behind the advent doors.",
         videoType: 'iFrame',
-        backgroundColour: 'red',
+        backgroundColour: '#dea5ff',
         backgroundColour2: 'skyBlue',
         url: 'https://player.vimeo.com/video/374874243?h=13d12165d8&autoplay=1&loop=1&color=ffffff&portrait=0'
     },   
@@ -193,15 +193,15 @@ export const projectList = {
         title: 'PICK YOUR PARTY | WALMART | MONDELEZ | \nRITZ | CHIPS AHOY | OREO',
         description1: "With designers and animators, I helped create this photo-feature experience for selected products at Walmart. Customers could purchase a party size pack of Oreo, Ritz crackers or Chip’s Ahoy to enter the ‘Pick your party’ sweepstake competition and have a chance of winning great prizes or trips. As well as having the chance to enter the competition, within the experience, the customer could also take fun and exciting pictures with the different party themes, Rio Carnival in Brazil, St. Patrick’s Day in Ireland, Mardi Gras in New Orleans, and New Year's Eve in NYC!",
         videoType: 'video',
-        backgroundColour: 'red',
+        backgroundColour: '#efca45',
         backgroundColour2: 'skyBlue',
         url: '/videos/pickYourParty.mp4',
     },
     21: {
-        title: "ROVIO | ANGRY BIRDS EXPLORE |CADBURY",
+        title: "ROVIO | ANGRY BIRDS EXPLORE | CADBURY",
         description1: "Zappar also worked with Rovio & Cadbury on this photo-feature experience. After opening the Angry Birds Explore app and scanning the code on the Cadbury's Christmas advent calendar the user is directed to the experience. Using Zappar’s Face Tracking technology one of Rovio’s Angry Bird characters is tracked to the user's face. The experience starts with just a colour on the user's face and then the character's features are gradually revealed being animated in a drawn style by one of the piggie characters. There’s an option to swap characters and add stickers from an infinite scrollable menu before pressing the camera button and grabbing a snap of the final result.",
         videoType: 'iFrame',
-        backgroundColour: 'red',
+        backgroundColour: '#86d1ec',
         backgroundColour2: 'skyBlue',
         url: 'https://player.vimeo.com/video/348407353?h=40f1d34e3a&autoplay=1&loop=1&color=ffffff&portrait=0'
     },
@@ -217,7 +217,7 @@ export const projectList = {
         title: '7-ELEVEN | DORITOS | DR PEPPER',
         description1: "Zappar’s collaboration with major retailer 7-Eleven was an ‘always on’ AR campaign. The experience utilised many of Zappar’s AR technology to create many interactive content and reward 7-Eleven customers with points, that they could redeem in 7-Eleven stores for free snacks and goodies. I was thrilled to work on two mini-activities with Zappar early on in my career there I developed a Doritos photo-feature experience and a Dr-Pepper basketball game where players would throw their basketballs at the Dr Pepper can target.",
         videoType: 'iFrame',
-        backgroundColour: 'red',
+        backgroundColour: '#f97b26',
         backgroundColour2: 'skyBlue',
         url: 'https://www.youtube.com/embed/8Id0-jrNlEM?si=FBoCtBTNtWJH3CDZ&amp;controls=0&autoplay=1'
     },
@@ -225,7 +225,7 @@ export const projectList = {
         title: 'WD40 SPECIALIST PENETRANT',
         description1: "The WD40 experience was an informational project created to give customers a detailed overview of the product and how it can be used. This experience utilises world tracking to place the digital content in world space. I took advantage of Three.js tools to give the scene lighting and an environment map to make the truck look as photo-realistic as possible.",
         videoType: 'video',
-        backgroundColour: '#2b49a5',
+        backgroundColour: 'yellow',
         backgroundColour2: 'skyBlue',
         url: '/videos/WD40.mp4',
     },
@@ -234,7 +234,7 @@ export const projectList = {
         description1: "Angry Burgers? Not quite, but Rovio and Burger King have teamed up to create an interactive WebAR experience centred around Angry Birds. With the help of our Zappar Creative Studio team, 'Egg Attack' was born - a web-app-based AR experience featuring a host of face and world-tracked games, bringing more fun to the Burger King experience, and more visibility for our furious feathered friends.",
         description2: "This game is a twist on traditional tower defence game, the aim of the game is for the user to protect the pile of Eggs from Attack, hence the game's name ‘Egg Attack’. After placing the content in world space and starting the game the player's goal is to quick-tap the hatchling to try to prevent them from reaching the eggs. There is also a slingshot that propels slime, if the hatchling gets caught up in the slime it slows down its speed giving the player an advantage. I enjoyed developing this fun and exciting game.",
         videoType: 'iFrame',
-        backgroundColour: '#5fd9d9',
+        backgroundColour: '#41fcfb',
         backgroundColour2: 'skyBlue',
         url: 'https://www.youtube-nocookie.com/embed/f5AvjReogNE?si=SsFb7eU5auX1KluR&amp;controls=0&autoplay=1'
     },
@@ -252,18 +252,18 @@ export const projectList = {
         description2: "As the sole developer, I worked closely with a member of the 3D team to work out a way to set up the 3D GLTF models in a way that they could easily be separated and rebuilt.",
         description3: "I created this experience using Three.js tools  To create a 3D scene with lighting and shadows and I utilised the world tracking from Zappar’s SDK library, so the models could be placed in world space. I used the Cannon.js open-source JavaScript 3D physics engine to apply physics to each of the separate model's parts.",
         videoType: 'iFrame',
-        backgroundColour: '#fcd82b',
+        backgroundColour: '#a9d0fe',
         backgroundColour2: 'skyBlue',
         url: 'https://www.youtube.com/embed/NUGmr6cS9fA?si=vMDqqGHCkRz2Byn7&amp;controls=0&autoplay=1'
     },
-    28: {
-        title: 'TROLLS',
-        description1: "While at Zappar, I was thrilled to work with Universal to bring Trolls World Tour to life before the new film release. The experience was designed to be accessed across social media platforms and is launched via WebAR using Zappar’s Instant World Tracking technology. This allows users to place an interactive map of the Troll's kingdom on the floor and explore a range of face filters with fun and scary hairstyles to try.",
-        videoType: 'iFrame',
-        backgroundColour: '#4433a5',
-        backgroundColour2: 'skyBlue',
-        url: 'https://player.vimeo.com/video/400664576?h=016a1bb2fb&autoplay=1&color=ffffff&portrait=0'
-    }
+    // 28: {
+    //     title: 'TROLLS',
+    //     description1: "While at Zappar, I was thrilled to work with Universal to bring Trolls World Tour to life before the new film release. The experience was designed to be accessed across social media platforms and is launched via WebAR using Zappar’s Instant World Tracking technology. This allows users to place an interactive map of the Troll's kingdom on the floor and explore a range of face filters with fun and scary hairstyles to try.",
+    //     videoType: 'iFrame',
+    //     backgroundColour: '#f680a7',
+    //     backgroundColour2: 'skyBlue',
+    //     url: 'https://player.vimeo.com/video/400664576?h=016a1bb2fb&autoplay=1&color=ffffff&portrait=0'
+    // }
 
     // 31: {
     //     title: '?RNIB',

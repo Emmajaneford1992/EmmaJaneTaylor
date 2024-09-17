@@ -31,9 +31,13 @@ export default function PageContent() {
   return <> 
 
     { currentPage == 'projects' && 
-    <ScrollControls infinite horizontal pages={ 28 } damping={0} >
-          <Content />
-    </ScrollControls>}
+    <>
+      {/* <Metaballs/> */}
+      <ScrollControls infinite horizontal pages={ 28 } damping={0} >
+            <Content />
+      </ScrollControls>
+    </>
+    }
 
     { currentPage == 'skills' && 
     <ScrollControls infinite horizontal pages={ 18 } damping={0} >
@@ -59,8 +63,7 @@ export default function PageContent() {
           </Scroll> 
         </ScrollControls>
     </>}
-        
-    </>
+  </>
 }
 
 
@@ -78,6 +81,7 @@ function Content() {
   useFrame((state, delta) => {
 
     setPageNum((scroll.offset * scroll.pages)); 
+
   })
   return <>
     <PresentationControls snap global zoom={1} rotation={[0, 0, 0]} polar={[0, 0]} azimuth={[0, 0]}>

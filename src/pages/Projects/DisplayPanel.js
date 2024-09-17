@@ -17,17 +17,19 @@ import { skillsList } from '../Skills/skillsList';
 export default function DisplayPanel({...props}){
 
     const [title, setTitle] = useState('')
-    const [description1, description2, setDescription1] = useState('')
+    const [description1, description2, setDescription1] = useState(0)
 
     const buttonRef = useRef();
     const [active, setActive] = useState(false);
     const [moreInfoVisible, setMoreInfoVisible] = useState(false);
     const groupRef = useRef();
+    const [pageNum, setPageNum] = useState(0);
 
     useEffect(() => {
       setActive(false);
-
-    }, [props.pageNum])
+      props.pageNum = props.pageNum > props.numOfPages-1 ? props.numOfPages -1 :  props.pageNum;
+      setPageNum(props.pageNum)
+    }, [props.pageNum], [props.numOfPages])
 
 
  
@@ -55,9 +57,6 @@ export default function DisplayPanel({...props}){
                   }
                 },
             }) }, groupRef); // <- scopes all selector text inside the context to this component (optional, default is document)
-           
-         
-
         }
           // () => ctx.revert(); // cleanup! 
       }
@@ -66,14 +65,15 @@ export default function DisplayPanel({...props}){
 
     const { gl } = useThree();
     return<>   
+  
        <group ref={groupRef} {...props}>
           {/* {!moreInfoVisible && */}
             <Html style={{ userSelect: 'none',  display: moreInfoVisible  ? 'none' : 'block' }} castShadow receiveShadow transform portal={{ current: gl.domElement.parentNode }}>
              {/* occlude="blending" */}
               <div className='video'>
                     <h1>{title}</h1>
-                  {projectList[props.pageNum].videoType == "iFrame" && <iframe  src={projectList[props.pageNum].url} width="640" height="360" frameBorder={0} allow="autoplay; picture-in-picture" allowFullScreen ></iframe>}
-                  {projectList[props.pageNum].videoType == "video" && <video width="640" height="360" controls autoplay="true"><source  src={projectList[props.pageNum].url} type="video/mp4"></source></video>}    
+                  {projectList[pageNum].videoType == "iFrame" && <iframe  src={projectList[pageNum].url} width="640" height="360" frameBorder={0} allow="autoplay; picture-in-picture" allowFullScreen ></iframe>}
+                  {projectList[pageNum].videoType == "video" && <video width="640" height="360" controls autoplay="true"><source  src={projectList[pageNum].url} type="video/mp4"></source></video>}    
               </div>
             </Html>
           {/* } */}
@@ -82,27 +82,25 @@ export default function DisplayPanel({...props}){
                   <Html style={{ userSelect: 'none',}} castShadow receiveShadow  transform portal={{ current: gl.domElement.parentNode }}>  
                   {/* occlude="blending" */}
                     <div className='moreInfo' > 
-    
                         <h1>{title}</h1>
                         <div>
-                          {projectList[props.pageNum].description1}<br/><br/>
-                          {projectList[props.pageNum].description2}<br/><br/>
-                          {projectList[props.pageNum].description3}<br/><br/>
-                          {projectList[props.pageNum].description4}<br/><br/>
-                          {projectList[props.pageNum].description5}<br/><br/>
-                          {projectList[props.pageNum].description6}
+                          {projectList[pageNum].description1}<br/><br/>
+                          {projectList[pageNum].description2}<br/><br/>
+                          {projectList[pageNum].description3}<br/><br/>
+                          {projectList[pageNum].description4}<br/><br/>
+                          {projectList[pageNum].description5}<br/><br/>
+                          {projectList[pageNum].description6}
                         </div>
                 
                     </div>
                   </Html>
                 </group> }
         </group>
-        <mesh ref={buttonRef}  position={[0, 0.2, 0]} onClick={(event) => setActive(!active)}>
-        <roundedPlaneGeometry  attach="geometry" args={[0.7, 0.3, 0.05]}  /> 
-       
-          <meshStandardMaterial attach="material"  color={"grey"} />
+        <mesh ref={buttonRef}  position={[0, -0.78, 0]} onClick={(event) => setActive(!active)}>
+        <roundedPlaneGeometry  attach="geometry" args={[0.7, 0.25, 0.05]}  /> 
+          <meshStandardMaterial attach="material"  color={"lightgrey"} />
         </mesh>
-        <Text font={suspend(bold).default}  fontSize={0.1} anchorY="bottom" anchorX="centre" lineHeight={0.8} position={[active ? -0.15 : -0.28, 0.15, 0.11]} color={'black'}  material-toneMapped={false}>
+        <Text font={suspend(bold).default}  fontSize={0.1} anchorY="bottom" anchorX="centre" lineHeight={0.8} position={[active ? -0.15 : -0.28, -0.8, 0.11]} color={'black'}  material-toneMapped={false}>
           {active ?'Video' :'Learn More'  }
           <meshStandardMaterial attach="material" color={'white'} emmisive={'white'} />
         </Text>

@@ -21,6 +21,11 @@ body,
     src: url(./assets/fonts/Roboto.ttf);
 }
 
+@font-face {
+    font-family: RobotoRegularFont;
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
 
 .header {
     display: block;
@@ -43,11 +48,10 @@ body,
 }
 
 .headerButtons button {
-    font-family: RobotoFont;
-    letter-spacing: 0.4vw;
-    font-weight: 200;
-    font-size: 0.5rem;
-    font-weight: 500;
+    font-family: RobotoRegularFont;
+    letter-spacing: 0.25vw;
+    font-size: 0.7rem;
+    font-weight: 900;
     border: none;
     background-color: none;
     background-color: #ffffff;
@@ -139,7 +143,9 @@ body,
     flex-direction: column;
     justify-content: flex-start;
     font-weight: bold;
-    width: 15rem;
+    width: 14rem;
+
+ 
 
 }
 
@@ -148,16 +154,19 @@ body,
 }
 
 .description {
+    font-family: RobotoRegularFont;
     padding-top: 1rem;
-    font-size: 0.7rem;
-    letter-spacing: 0.2rem;
+    font-size:  0.7rem;
+    letter-spacing: 0.15rem;
+    line-height: 0.9rem;
+    color: black;
 
 }
 
 .examples {
     display: flex;
     flex-direction: column;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 100;
     text-align: center;
 
@@ -253,7 +262,7 @@ body {
     color: black;
     font-family: RobotoFont;
     background-color: none;
-    font-size:  0.5vw;
+    font-size:  0.7rem;
 }
 
 @import url('https://rsms.me/inter/inter.css');
@@ -348,7 +357,7 @@ body {
     backdrop-filter: blur(10px);
     filter: drop-shadow(0 1mm 1mm rgb(255, 255, 255, 0.5));
     font-family: RobotoFont;
-    letter-spacing: 0.2vw;
+    letter-spacing: 0.15vw;
 }
 
 
@@ -373,9 +382,10 @@ body {
 .aboutMe-text {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     height: 100%;
     font-size: 0.8rem;
+
     
 }
 
@@ -402,7 +412,7 @@ body {
     backdrop-filter: blur(10px);
     filter: drop-shadow(0 1mm 1mm rgb(255, 255, 255, 0.5));
     font-family: RobotoFont;
-    letter-spacing: 0.1vw;
+    letter-spacing: 0.15vw;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -411,3 +421,10 @@ body {
     font-size:  0.8rem;
 }
 
+.moreInfo div {
+    width: 80%
+}
+
+.card {
+    background-color: red;
+}

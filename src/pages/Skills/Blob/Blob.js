@@ -55,7 +55,7 @@ export const Blob = ({...props}) => {
   });
 
   useFrame((state, delta) => {
-    //console.log('Blog', props.pageNum)
+
     //lastNum = pageNum != lastNum ? pageNum : lastNum;
     pageNum = props.pageNum; 
     lastNum = pageNum - 1;

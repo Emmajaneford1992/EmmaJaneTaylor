@@ -11,6 +11,7 @@ import '../../util';
 
 import {Laptop} from './Laptop/Laptop'
 import WobblyBlob from './WobblyBlob';
+import { HandPrompt } from './HandPrompt';
 
 const bold = import('@pmndrs/assets/fonts/inter_bold.woff')
 const medium = import('@pmndrs/assets/fonts/inter_medium.woff')
@@ -22,7 +23,7 @@ export default function Skills({...props}) {
 
   return (
     <>
-      <PresentationControls snap global zoom={0.8} rotation={[0, 0, 0]} polar={[0, Math.PI / 4]} azimuth={[-Math.PI / 10, Math.PI / 10]}>
+      <PresentationControls snap global zoom={0.8} rotation={[0, 0, 0]} polar={[0, Math.PI / 4]} azimuth={[-Math.PI / 9, Math.PI / 9]}>
         <group position={[-2,2,-5]}>
           <Float floatIntensity={3} rotationIntensity={0.5}>
             <Laptop  {...props}/>
@@ -33,9 +34,9 @@ export default function Skills({...props}) {
               <WobblyBlob {...props}/>
               <Carousel {...props} />
           </Rig>
+          <HandPrompt {...props}/>
         </group>
       </PresentationControls>
-
     </>
   )
 }
@@ -50,7 +51,6 @@ export function Dots({...props}) {
   ))
 }
 
-
 function Dot({...props}) {
   return (
     <mesh position={[(props.num - (18/2))/8 , -4, 0]} >
@@ -60,11 +60,10 @@ function Dot({...props}) {
   )
 }
 
-
 export function Rig({...props}) {
   const ref = useRef()
   useFrame((state, delta) => {
-    ref.current.rotation.z = (props.pageNumFlt) * (Math.PI / 5) // Rotate contents
+    ref.current.rotation.z = (props.pageNumFlt) * (Math.PI / 4.5) // Rotate contents
     state.events.update() // Raycasts every frame rather than on pointer-move
     state.camera.lookAt(0, 0, 0) // Look at center
   })
@@ -73,7 +72,7 @@ export function Rig({...props}) {
 
 export function Carousel({...props}) {
   const radius = 8;
-  const count = 10;
+  const count = 9;
   return Array.from({ length: count }, (_, i) => (
     <Card
       key={i}
@@ -100,8 +99,8 @@ function Card({rot = [0,0,0], pos =[0,0,0],  ...props }){
 
   useFrame((state, delta) => {
 
-    let cNum = (Math.floor(((props.pageNum+5) - props.num)/ props.count) * props.count) + props.num;
-    groupRef.current.rotation.z = -(props.pageNumFlt) * (Math.PI / 5);
+    let cNum = (Math.floor(((props.pageNum+4.5) - props.num)/ props.count) * props.count) + props.num;
+    groupRef.current.rotation.z = -(props.pageNumFlt) * (Math.PI / 4.5);
     cNum = cNum > props.numOfPages ? cNum - props.numOfPages : cNum < 1 ?  cNum + props.numOfPages : cNum;
     let op = Math.abs(((((props.pageNumFlt) - props.num + props.count) % props.count) /props.count)-0.5)*3-0.5;
     setOpacity( op )
@@ -112,7 +111,7 @@ function Card({rot = [0,0,0], pos =[0,0,0],  ...props }){
 
     <group ref ={groupRef} position={pos} rotation={rot} scale={2}>    
       <mesh position={[0,0,-0.2]} url={url} >
-        <planeGeometry args={[ 1.5, 1.5]} />
+        <planeGeometry args={[1.5, 1.5]} />
         <meshBasicMaterial attach="material" map={texture} transparent={true} opacity={opacity} side={THREE.FrontSide}/>
       </mesh>
     </group>
