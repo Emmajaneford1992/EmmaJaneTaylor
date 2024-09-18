@@ -10,8 +10,11 @@ import '../../util';
 
 
 import {Laptop} from './Laptop/Laptop'
-import WobblyBlob from './WobblyBlob';
-import { HandPrompt } from './HandPrompt';
+
+import { HandPrompt } from '../../components/HandPrompt';
+import { Dots } from '../../components/Dots';
+import WobblyBlob from '../../components/WobblyBlob';
+
 
 const bold = import('@pmndrs/assets/fonts/inter_bold.woff')
 const medium = import('@pmndrs/assets/fonts/inter_medium.woff')
@@ -27,36 +30,17 @@ export default function Skills({...props}) {
         <group position={[-2,2,-5]}>
           <Float floatIntensity={3} rotationIntensity={0.5}>
             <Laptop  {...props}/>
-            <Dots {...props}/>
+            <Dots {...props} numOfPages={props.numOfPages} positionY={-3.5}/>
             <Title {...props}/>
           </Float>
           <Rig rotation={[0, 0, 0]} scale = {0.32} position={[0,0,0]} {...props}>
-              <WobblyBlob {...props}/>
+              <WobblyBlob {...props}  opacity={1} colour={skillsList[props.pageNum].hex} scale={5} scaleHover={6}/>
               <Carousel {...props} />
           </Rig>
-          <HandPrompt {...props}/>
+          <HandPrompt {...props} position={[1,-3.5,3]}/>
         </group>
       </PresentationControls>
     </>
-  )
-}
-
-export function Dots({...props}) {
-  return Array.from({ length: 18 }, (_, i) => (
-    <Dot
-      key={i}
-      num = {i}
-      pageNum = {props.pageNum}
-    />
-  ))
-}
-
-function Dot({...props}) {
-  return (
-    <mesh position={[(props.num - (18/2))/8 , -4, 0]} >
-      <roundedPlaneGeometry attach="geometry" args={[0.05,0.05, 0.04]} />
-      <meshBasicMaterial attach="material" color={props.pageNum == props.num ? "grey" : "lightgrey"}/>
-    </mesh>
   )
 }
 

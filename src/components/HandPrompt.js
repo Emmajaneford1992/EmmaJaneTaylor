@@ -18,11 +18,11 @@ export function HandPrompt({...props }){
     });
   
     return (
-      <group  position={[1,-3.5,3]}>
-        <mesh ref={planeRef} position={[0,0,0]} rotation={[0,0,0.5]} url={url}  renderOrder={4}>
-              <planeGeometry args={[0.4,0.4]} />
-              <meshStandardMaterial ref={materialRef} attach="material" map={texture} transparent={true} opacity={1} side={THREE.FrontSide} depthTest={false} depthWrite={true}/>
-        </mesh>
+      <group position={props.position}>
+          <mesh ref={planeRef}  url={url}  renderOrder={4}>
+                <planeGeometry args={[0.4,0.4]} />
+                <meshStandardMaterial ref={materialRef} attach="material" map={texture} transparent={true} opacity={1} side={THREE.FrontSide} depthTest={false} depthWrite={true}/>
+          </mesh>
       </group>
     )
   }

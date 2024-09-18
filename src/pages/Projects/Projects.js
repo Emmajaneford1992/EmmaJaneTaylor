@@ -9,8 +9,10 @@ import '../../util';
 
 import { projectList } from './projectList';
 import DisplayPanel from './DisplayPanel';
-import WobblyBlob from './WobblyBlob';
-import { HandPrompt } from './HandPrompt';
+import WobblyBlob from '../../components/WobblyBlob';
+import { HandPrompt } from '../../components/HandPrompt';
+import { Dots } from '../../components/Dots';
+
 
 const bold = import('@pmndrs/assets/fonts/inter_bold.woff')
 const medium = import('@pmndrs/assets/fonts/inter_medium.woff')
@@ -26,36 +28,19 @@ export default function Projects({...props}) {
         <group  position={[0,0,-5.5]}>
           <Float floatIntensity={3} rotationIntensity={0.5}>
             <DisplayPanel scale = {0.45} position={[0,1.6,0]} {...props}/> 
-            <Dots  position={[0,0,0]}  {...props}/>
+            <Dots   {...props} numOfPages={props.numOfPages} positionY={-1}/>
           </Float> 
           <Rig rotation={[0, 0, 0]} scale = {0.35} position={[0,-3,0]} {...props}>
               <Carousel {...props}/>
           </Rig>
-          <HandPrompt {...props}/>
+          <HandPrompt {...props} position={[0,-1.5,3.5]}/>
         </group>
       </PresentationControls>       
     </>
   )
 }
 
-export function Dots({...props}) {
-  return Array.from({ length: 28 }, (_, i) => (
-    <Dot
-      key={i}
-      num = {i}
-      pageNum = {props.pageNum}
-    />
-  ))
-}
 
-function Dot({...props}) {
-  return (
-    <mesh position={[(props.num - (28/2))/8 , -1, 0]} >
-      <roundedPlaneGeometry attach="geometry" args={[0.05,0.05, 0.04]} />
-      <meshBasicMaterial attach="material" color={props.pageNum == props.num ? "grey" : "lightgrey"}/>
-    </mesh>
-  )
-}
 
 export function Rig(props) {
   const ref = useRef()
@@ -124,8 +109,7 @@ function Card({...props }){
     <group ref ={groupRef} position={props.pos} rotation={props.rot} scale={2}>    
     <a.ambientLight intensity={0.5} />
       <a.pointLight ref={light} position-z={-15} intensity={0.5} color="#F8C069" />
-      <WobblyBlob {...props}  opacity={opacity} color={projectList[cardNum].backgroundColour}/>
-
+      <WobblyBlob {...props}  opacity={opacity} colour={0xffffff} scale={1} scaleHover={1}/>
       <Environment files="https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/industrial_workshop_foundry_1k.hdr" />
       <mesh position={[0,0,0]} url={url}  renderOrder={2}>
           <planeGeometry args={[1.5, 1.5]} />
