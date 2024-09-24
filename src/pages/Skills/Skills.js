@@ -14,6 +14,7 @@ import {Laptop} from './Laptop/Laptop'
 import { HandPrompt } from '../../components/HandPrompt';
 import { Dots } from '../../components/Dots';
 import WobblyBlob from '../../components/WobblyBlob';
+import { Arrows } from '../../components/Arrows';
 
 
 const bold = import('@pmndrs/assets/fonts/inter_bold.woff')
@@ -30,7 +31,8 @@ export default function Skills({...props}) {
         <group position={[-2,2,-5]}>
           <Float floatIntensity={3} rotationIntensity={0.5}>
             <Laptop  {...props}/>
-            <Dots {...props} numOfPages={props.numOfPages} positionY={-3.5}/>
+            <Dots   {...props} numOfPages={props.numOfPages} positionY={-3.7} handleClick={props.updateScroll}/>
+            <Arrows {...props} positionX={1.9} positionY={-3.7} handleClick={props.arrowClicked}/>
             <Title {...props}/>
           </Float>
           <Rig rotation={[0, 0, 0]} scale = {0.32} position={[0,0,0]} {...props}>

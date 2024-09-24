@@ -6,20 +6,18 @@ import * as THREE from 'three';
 import { a } from '@react-spring/three'
 import '../../util';
 
-
 import { projectList } from './projectList';
 import DisplayPanel from './DisplayPanel';
 import WobblyBlob from '../../components/WobblyBlob';
 import { HandPrompt } from '../../components/HandPrompt';
 import { Dots } from '../../components/Dots';
-
+import { Arrows } from '../../components/Arrows';
 
 const bold = import('@pmndrs/assets/fonts/inter_bold.woff')
 const medium = import('@pmndrs/assets/fonts/inter_medium.woff')
 
 extend(geometry)
 const AnimatedMaterial = a(MeshDistortMaterial)
-
 
 export default function Projects({...props}) {
   return (
@@ -28,9 +26,10 @@ export default function Projects({...props}) {
         <group  position={[0,0,-5.5]}>
           <Float floatIntensity={3} rotationIntensity={0.5}>
             <DisplayPanel scale = {0.45} position={[0,1.6,0]} {...props}/> 
-            <Dots   {...props} numOfPages={props.numOfPages} positionY={-1}/>
+            <Dots   {...props} numOfPages={props.numOfPages} positionY={-0.7} handleClick={props.updateScroll}/>
+            <Arrows {...props} positionX={3.75} positionY={-2.2} handleClick={props.arrowClicked}/>
           </Float> 
-          <Rig rotation={[0, 0, 0]} scale = {0.35} position={[0,-3,0]} {...props}>
+          <Rig rotation={[0, 0, 0]} scale = {0.29} position={[0,-3,0]} {...props}>
               <Carousel {...props}/>
           </Rig>
           <HandPrompt {...props} position={[0,-1.5,3.5]}/>
@@ -106,7 +105,7 @@ function Card({...props }){
 
 
   return (
-    <group ref ={groupRef} position={props.pos} rotation={props.rot} scale={2}>    
+    <group ref ={groupRef} position={props.pos} rotation={props.rot} scale={2.5}>    
     <a.ambientLight intensity={0.5} />
       <a.pointLight ref={light} position-z={-15} intensity={0.5} color="#F8C069" />
       <WobblyBlob {...props}  opacity={opacity} colour={0xffffff} scale={1} scaleHover={1}/>

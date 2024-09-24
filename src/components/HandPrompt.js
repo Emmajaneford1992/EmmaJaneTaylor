@@ -19,7 +19,7 @@ export function HandPrompt({...props }){
   
     return (
       <group position={props.position}>
-          <mesh ref={planeRef}  url={url}  renderOrder={4}>
+          <mesh ref={planeRef} rotation={[0,0,0.5]} url={url}  renderOrder={4}>
                 <planeGeometry args={[0.4,0.4]} />
                 <meshStandardMaterial ref={materialRef} attach="material" map={texture} transparent={true} opacity={1} side={THREE.FrontSide} depthTest={false} depthWrite={true}/>
           </mesh>

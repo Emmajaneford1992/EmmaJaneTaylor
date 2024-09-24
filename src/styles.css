@@ -55,13 +55,14 @@ body,
     border: none;
     background-color: none;
     background-color: #ffffff;
-    color: black;
     padding: 1vw;
     text-decoration: none;
+    color: black;
 }
 
 .headerButtons button a {
     text-decoration: none;
+    color: black;
 }
 
 
@@ -314,7 +315,7 @@ body {
 .titleScroll {
     font-size: 5px;   
     width: 100px;
-    height: 5vw;
+    height: 10vw;
     /* background-color: red; */
     overflow: hidden;
 }
@@ -329,7 +330,7 @@ body {
 .titleScrollSlider h1 {
     display: flex;
     width: 100px;
-    height: 7dvb;
+    height: 7vw;
     align-items: center;
 }
 

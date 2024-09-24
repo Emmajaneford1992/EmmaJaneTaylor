@@ -96,11 +96,11 @@ export default function DisplayPanel({...props}){
                   </Html>
                 </group> }
         </group>
-        <mesh ref={buttonRef}  position={[0, -0.78, 0]} onClick={(event) => setActive(!active)}>
+        <mesh ref={buttonRef}  position={[0, -0.98, 0]} onClick={(event) => setActive(!active)}>
         <roundedPlaneGeometry  attach="geometry" args={[0.7, 0.25, 0.05]}  /> 
           <meshStandardMaterial attach="material"  color={"lightgrey"} />
         </mesh>
-        <Text font={suspend(bold).default}  fontSize={0.1} anchorY="bottom" anchorX="centre" lineHeight={0.8} position={[active ? -0.15 : -0.28, -0.8, 0.11]} color={'black'}  material-toneMapped={false}>
+        <Text font={suspend(bold).default}  fontSize={0.1} anchorY="bottom" anchorX="centre" lineHeight={0.8} position={[active ? -0.15 : -0.28, -1, 0.11]} color={'black'}  material-toneMapped={false}>
           {active ?'Video' :'Learn More'  }
           <meshStandardMaterial attach="material" color={'white'} emmisive={'white'} />
         </Text>

@@ -57,7 +57,7 @@ export default function PageContent() {
     {currentPage == 'aboutMe' &&
     <>
         <Metaballs/>
-        <ScrollControls  pages={ 3 } damping={0} >
+        <ScrollControls  pages={ 3.5 } damping={0} >
           <Scroll html>
             <AboutMe/>
           </Scroll> 
@@ -72,22 +72,39 @@ function Content() {
 
   const scroll = useScroll()
   const [pageNum, setPageNum] = useState(0);
+  const [lastPageNum, setLastPageNum] = useState(0);
+  const [scrolling, setScrolling] = useState(false);
 
-// console.log(`Page changed to: ${currentPage}`);
-  useEffect(() => {
-    
-  }, [currentPage]);
+  const handleArrowClick = (direction) => {
+    console.log('arrow clicked:', direction)
+    handleReposition(direction == 'left' ? pageNum-1 : pageNum+1)
+  };
+
+  const handleReposition = (i) => {
+    console.log('handleReposition', i)
+    scroll.el.scrollTo({ left: (i/(scroll.pages+1))*scroll.el.scrollWidth, behavior: 'smooth' });
+  };
+  
 
   useFrame((state, delta) => {
-
+    setLastPageNum(pageNum);
     setPageNum((scroll.offset * scroll.pages)); 
-
+    if(pageNum == lastPageNum){
+      if(scrolling){
+        setScrolling(false);
+        handleReposition(Math.round(pageNum))
+      }
+    }
+    else{
+      if(!scrolling){
+        setScrolling(true)
+      }
+    }
   })
   return <>
     <PresentationControls snap global zoom={1} rotation={[0, 0, 0]} polar={[0, 0]} azimuth={[0, 0]}>
-        { currentPage == 'projects' && <Projects scrollOffset={scroll.offset} pageNum={Math.round(pageNum)} pageNumFlt={pageNum} numOfPages={28}/> }
-        { currentPage == 'skills'  &&  <Skills pageNum={Math.round(pageNum)} pageNumFlt={pageNum} numOfPages={18}/> } 
+        { currentPage == 'projects' && <Projects scrollOffset={scroll.offset} pageNum={Math.round(pageNum)} pageNumFlt={pageNum} numOfPages={28} updateScroll={handleReposition} arrowClicked={handleArrowClick}/>}
+        { currentPage == 'skills'  &&  <Skills pageNum={Math.round(pageNum)} pageNumFlt={pageNum} numOfPages={18} updateScroll={handleReposition} arrowClicked={handleArrowClick}/> } 
     </PresentationControls>
-  
   </>
 } 
