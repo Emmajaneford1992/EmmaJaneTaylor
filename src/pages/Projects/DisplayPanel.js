@@ -5,6 +5,7 @@ import { act, useEffect, useRef, useState } from 'react';
 import '../../styles.css';
 import { projectList } from './projectList';
 import gsap from 'gsap';
+import * as THREE from 'three';
 
 import { suspend } from 'suspend-react';
 
@@ -24,6 +25,7 @@ export default function DisplayPanel({...props}){
     const [moreInfoVisible, setMoreInfoVisible] = useState(false);
     const groupRef = useRef();
     const [pageNum, setPageNum] = useState(0);
+    const [hovered, setHovered] = useState(false);
 
     useEffect(() => {
       setActive(false);
@@ -68,19 +70,17 @@ export default function DisplayPanel({...props}){
   
        <group ref={groupRef} {...props}>
           {/* {!moreInfoVisible && */}
-            <Html style={{ userSelect: 'none',  display: moreInfoVisible  ? 'none' : 'block' }} castShadow receiveShadow transform portal={{ current: gl.domElement.parentNode }}>
-             {/* occlude="blending" */}
+            <Html style={{ userSelect: 'none',  pointerEvents: hovered ? 'auto' : 'none',  display: moreInfoVisible  ? 'none' : 'block' }} castShadow receiveShadow transform portal={{ current: gl.domElement.parentNode }}>
               <div className='video'>
                     <h1>{title}</h1>
                   {projectList[pageNum].videoType == "iFrame" && <iframe  src={projectList[pageNum].url} width="640" height="360" frameBorder={0} allow="autoplay; picture-in-picture" allowFullScreen ></iframe>}
-                  {projectList[pageNum].videoType == "video" && <video width="640" height="360" controls autoplay="true"><source  src={projectList[pageNum].url} type="video/mp4"></source></video>}    
+                  {projectList[pageNum].videoType == "video" && <video width="640" height="360" controls autoPlay={true}><source  src={projectList[pageNum].url} type="video/mp4"></source></video>} 
               </div>
             </Html>
           {/* } */}
           {moreInfoVisible &&
                 <group rotation={[0,Math.PI,0]}>
-                  <Html style={{ userSelect: 'none',}} castShadow receiveShadow  transform portal={{ current: gl.domElement.parentNode }}>  
-                  {/* occlude="blending" */}
+                  <Html style={{ userSelect: 'none', pointerEvents: hovered ? 'auto' : 'none'}} castShadow receiveShadow  transform portal={{ current: gl.domElement.parentNode }}>  
                     <div className='moreInfo' > 
                         <h1>{title}</h1>
                         <div>
@@ -104,6 +104,11 @@ export default function DisplayPanel({...props}){
           {active ?'Video' :'Learn More'  }
           <meshStandardMaterial attach="material" color={'white'} emmisive={'white'} />
         </Text>
+
+        <mesh position={[0,1.4,0]} onPointerOver={(e) => setHovered(true)} onPointerOut={(e) => setHovered(false)}>
+            <planeGeometry args={[7,4]} />
+            <meshStandardMaterial color={'white'}  transparent={true} opacity={0} side={THREE.FrontSide} depthTest={false} depthWrite={true}/>
+       </mesh>
   </>
 }
 
