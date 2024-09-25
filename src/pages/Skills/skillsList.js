@@ -13,17 +13,6 @@ export const skillsList = [
     {
         id: 1,
         key: 1,
-        title: 'HTML',
-        description: 'LANGUAGE',
-        backgroundColour: 'orange',
-        url: '/logos/html.png',
-        websiteUrl : 'https://en.wikipedia.org/wiki/HTML',
-        rgb: [0.94510, 0.39608, 0.16078],
-        hex: '#f16529'
-    },
-    {
-        id: 2,
-        key: 2,
         title: 'CSS',
         description: 'LANGUAGE',
         backgroundColour: 'blue',
@@ -33,8 +22,8 @@ export const skillsList = [
         hex: '#349bd5'
     },      
     {
-        id: 3,
-        key: 3,
+        id: 2,
+        key: 2,
         title: 'JAVASCRIPT',
         description: 'LANGUAGE',
         backgroundColour: 'YELLOW',
@@ -44,8 +33,8 @@ export const skillsList = [
         hex: '#efdb50'
     },
     {
-        id: 4,
-        key: 4,
+        id: 3,
+        key: 3,
         title: 'TYPESCRIPT',
         description: 'LANGUAGE',
         backgroundColour: 'Blue',
@@ -55,8 +44,8 @@ export const skillsList = [
         hex: '#3078c6'
     },
     {
-        id: 5,
-        key: 5,
+        id: 4,
+        key: 4,
         title: 'THREE.JS',
         description: 'LIBRARY',
         backgroundColour: 'orange',
@@ -66,8 +55,8 @@ export const skillsList = [
         hex: '#ff8000'
     },
     {
-        id: 6,
-        key: 6,
+        id: 5,
+        key: 5,
         title: 'REACT',
         description: 'FRAMEWORK',
         backgroundColour: 'skyblue',
@@ -77,8 +66,8 @@ export const skillsList = [
         hex: '#63dbfc'
     },
     {
-        id: 7,
-        key: 7,
+        id: 6,
+        key: 6,
         title: 'R3F',
         description: 'FRAMEWORK',
         backgroundColour: 'skyblue',
@@ -88,8 +77,8 @@ export const skillsList = [
         hex: '#63dbfc' 
     },
     {
-        id: 8,
-        key: 8,
+        id: 7,
+        key: 7,
         title: 'GIT',
         description: 'VERSION CONTROL',
         backgroundColour: 'orange',
@@ -99,8 +88,8 @@ export const skillsList = [
         hex: '#f05233'
     },
     {
-        id: 9,
-        key: 9,
+        id: 8,
+        key: 8,
         title: 'WEBPACK',
         description: 'PACKAGING',
         backgroundColour: 'skyblue',
@@ -110,8 +99,8 @@ export const skillsList = [
         hex: '#31a8ff'
     },
     {
-        id: 10,
-        key: 10,
+        id: 9,
+        key: 9,
         title: 'VITE',
         description: 'PACKAGING',
         backgroundColour: 'skyblue',
@@ -121,8 +110,8 @@ export const skillsList = [
         hex: '#906efd'
     },
     {
-        id: 11,
-        key: 11,
+        id: 10,
+        key: 10,
         title: 'PARCEL',
         description: 'PACKGING',
         backgroundColour: 'purple',
@@ -132,8 +121,8 @@ export const skillsList = [
         hex: '#31a8ff' 
     },
     {
-        id: 12,
-        key: 12,
+        id: 11,
+        key: 11,
         title: 'ZAPPAR\nSTUDIO',
         description: 'CREATIVE TOOL',
         backgroundColour: 'skyblue',
@@ -143,8 +132,8 @@ export const skillsList = [
         hex: '#cd3927'
     },
     {
-        id: 13,
-        key: 13,
+        id: 12,
+        key: 12,
         title: 'UNITY',
         description: 'CREATIVE TOOL',
         backgroundColour: 'grey',
@@ -154,8 +143,8 @@ export const skillsList = [
         hex: '#808080'
     },
     {
-        id: 14,
-        key: 14,
+        id: 13,
+        key: 13,
         title: 'MAYA',
         description: 'CREATIVE 3D TOOL',
         backgroundColour: 'skyBlue',
@@ -165,8 +154,8 @@ export const skillsList = [
         hex: '#38a5cc'
     },
     {
-        id: 15,
-        key: 15,
+        id: 14,
+        key: 14,
         title: 'BLENDER',
         description: 'CREATIVE 3D TOOL',
         backgroundColour: 'orange',
@@ -176,8 +165,8 @@ export const skillsList = [
         hex: '#ea7601'
     },
     {
-        id: 16,
-        key: 16,
+        id: 15,
+        key: 15,
         title: 'PHOTOSHOP',
         description: 'CREATIVE DESIGN TOOL',
         backgroundColour: 'blue',
@@ -187,8 +176,8 @@ export const skillsList = [
         hex: '#31a7ff'
     },
     {
-        id: 17,
-        key: 17,
+        id: 16,
+        key: 16,
         title: 'ILLUSTATOR',
         description: 'CREATIVE DESIGN TOOL',
         backgroundColour: 'orange',
@@ -198,8 +187,8 @@ export const skillsList = [
         hex: '#ff9a01'
     },
     {
-        id: 18,
-        key: 18,
+        id: 17,
+        key: 17,
         title: 'VISUAL STUDIO CODE',
         description: 'DEVELOPEMENT ENVIROMENT',
         backgroundColour: 'blue',
@@ -209,8 +198,8 @@ export const skillsList = [
         hex: '#31a7ff'
     },
     {
-        id: 19,
-        key: 19,
+        id: 18,
+        key: 18,
         title: 'HTML',
         description: 'LANGUAGE',
         backgroundColour: 'orange',

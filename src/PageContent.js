@@ -77,18 +77,25 @@ function Content() {
 
   const handleArrowClick = (direction) => {
     console.log('arrow clicked:', direction)
-    handleReposition(direction == 'left' ? pageNum-1 : pageNum+1)
+    let newPage = direction == 'left' ?  Math.round(pageNum)-1 : Math.round(pageNum)+1;
+    newPage = newPage < 0 ?  newPage + scroll.pages :  newPage = newPage > scroll.pages -1 ? direction == 'left' ? newPage - scroll.pages : newPage: newPage
+    handleReposition(newPage)
   };
 
   const handleReposition = (i) => {
-    console.log('handleReposition', i)
+    if(pageNum < 1 && i >= scroll.pages-1){
+      console.log('r if ', scroll.pages, pageNum, i, scroll.el.scrollWidth, (i/(scroll.pages+1))*scroll.el.scrollWidth)
+      scroll.el.scrollLeft =    ((scroll.pages-0.05)/(scroll.pages+1))*scroll.el.scrollWidth
+    }
+    else if(i < 1 && pageNum >= scroll.pages-1){
+      i = i + scroll.pages
+    }
     scroll.el.scrollTo({ left: (i/(scroll.pages+1))*scroll.el.scrollWidth, behavior: 'smooth' });
   };
-  
 
   useFrame((state, delta) => {
     setLastPageNum(pageNum);
-    setPageNum((scroll.offset * scroll.pages)); 
+    setPageNum(scroll.offset * scroll.pages);
     if(pageNum == lastPageNum){
       if(scrolling){
         setScrolling(false);

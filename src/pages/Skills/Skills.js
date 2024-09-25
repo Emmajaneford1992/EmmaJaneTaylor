@@ -49,7 +49,7 @@ export default function Skills({...props}) {
 export function Rig({...props}) {
   const ref = useRef()
   useFrame((state, delta) => {
-    ref.current.rotation.z = (props.pageNumFlt) * (Math.PI / 4.5) // Rotate contents
+    ref.current.rotation.z = -(props.pageNumFlt) * (Math.PI / 4.5) // Rotate contents
     state.events.update() // Raycasts every frame rather than on pointer-move
     state.camera.lookAt(0, 0, 0) // Look at center
   })
@@ -65,7 +65,7 @@ export function Carousel({...props}) {
       num = {i}
       count = {count}
       radius = {radius}
-      pos={[Math.sin(((i+4) / count) * Math.PI * 2) * radius,  Math.cos(((i+4) / count) * Math.PI * 2) * radius,0]}
+      pos={[Math.sin(((i-3) / count) * Math.PI * 2) * -radius,  Math.cos(((i-3) / count) * Math.PI * 2) * radius,0]}
       rot={[0, 0, 0]}
       pageNum={props.pageNum}
       pageNumFlt = {props.pageNumFlt}
@@ -84,10 +84,17 @@ function Card({rot = [0,0,0], pos =[0,0,0],  ...props }){
   const texture = useMemo(() => new THREE.TextureLoader().load(url), [url]);
 
   useFrame((state, delta) => {
-
     let cNum = (Math.floor(((props.pageNum+4.5) - props.num)/ props.count) * props.count) + props.num;
-    groupRef.current.rotation.z = -(props.pageNumFlt) * (Math.PI / 4.5);
-    cNum = cNum > props.numOfPages ? cNum - props.numOfPages : cNum < 1 ?  cNum + props.numOfPages : cNum;
+    cNum = cNum < 0 ?  cNum + props.numOfPages :  cNum = cNum > props.numOfPages -1 ? cNum - props.numOfPages : cNum
+    if(props.pageNum == cNum){
+    //console.log('cNum: ',cNum, 'title: ',skillsList[cNum].title,  'url ', skillsList[cNum].websiteUrl );
+    }
+
+
+    // let cNum = (Math.floor(((props.pageNum+4.5) - props.num)/ props.count) * props.count) + props.num;
+    // cNum = cNum > props.numOfPages ? cNum - props.numOfPages : cNum < 1 ?  cNum + props.numOfPages : cNum;
+    groupRef.current.rotation.z = (props.pageNumFlt) * (Math.PI / 4.5);
+   
     let op = Math.abs(((((props.pageNumFlt) - props.num + props.count) % props.count) /props.count)-0.5)*3-0.5;
     setOpacity( op )
     setCardNum(cNum)

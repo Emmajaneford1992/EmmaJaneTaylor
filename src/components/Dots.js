@@ -3,7 +3,7 @@ export function Dots({...props}) {
     <Dot
       key={i}
       num = {i}
-      pageNum = {props.pageNum}
+      pageNum = {props.pageNum >= props.numOfPages ? 0 : props.pageNum} 
       numOfPages = {props.numOfPages}
       positionY = {props.positionY}
       onClick={() => props.handleClick(i)}
